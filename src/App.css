@@ -1,5 +1,14 @@
+.bg-danger {
+  background-color: #ee3e3d !important;
+}
+
 .nav-name {
   font-size: 14px !important;
+}
+
+.navbar .navbar-nav .nav-link:not(.btn) {
+  font-size: 0.9rem;
+  line-height: 2rem;
 }
 
 #hero .carousel .carousel-inner {
