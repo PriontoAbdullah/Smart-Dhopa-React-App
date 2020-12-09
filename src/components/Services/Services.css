@@ -1,0 +1,87 @@
+.cart-controller {
+	border-radius: 30px;
+    border: 1px solid #FF3636;
+	line-height: 30px;
+    padding: 0 13px !important;
+    margin: 9px 1px !important;
+}
+
+.btnQ {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btnQ:focus{
+    outline: none;
+}
+
+.quantity{
+    font-size: 14px;
+    margin: 0 8px;
+}
+
+.MuiListItem-root{
+    padding: 0 auto !important;
+}
+
+.item-name{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.2;
+    font-size: 19px;
+    font-weight: 400;
+    color: #2e2e2e;
+}
+
+.price{
+  color: #209e61;
+  font-size: 16px;  
+}
+
+.MuiListItem-root {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.MuiTypography-body1 {
+    line-height: 3 !important;
+}
+
+.orderList{
+    margin-left: -520px;
+    margin-top: -10px;
+    margin-bottom: 35px;
+}
+
+.story {
+ font-weight: 400;
+}
+
+.terms{
+    font-size: 18px;
+}
+
+@media (max-width: 590px) {
+    .orderList{
+        margin-left: -320px;
+
+    }
+
+    .mobileView{
+        margin-left: -40px;
+    }
+}
