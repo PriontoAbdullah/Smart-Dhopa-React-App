@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Table } from 'reactstrap';
 import Logo from '../../images/logo.png';
 
 const Invoice = (props) => {
-    useEffect(() => {
-		window.scrollTo(0, 0);
-    }, []);
     
 	const singleOrder = {...props.viewOrder}
 
 	const { fullName, email, mobileNumber, road, flat, address, getDate, getTime } = singleOrder.shipment;
     const { subTotal, deliveryCharge, grandTotal } = singleOrder.price;
-    const { number } = singleOrder.orderDetails;
 	let count = 0;
 
 	return (
@@ -22,7 +18,7 @@ const Invoice = (props) => {
 			<div className="row">
 				<div className="col-print-8">
 					<h3>
-						<span className="text-secondary">Order Number: </span>#{number}
+						<span className="text-secondary">Order Number: </span>#{singleOrder.orderDetails}
 					</h3>
 					<h4>
 						<span className="text-secondary">Name: </span>

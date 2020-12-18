@@ -57,13 +57,29 @@
 	float: left;
 }
 
+.background-Order {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.35)), url('../../images/bg/BG-Order.png');
+}
+
+.progress-color {
+	color: rgb(255, 240, 240) !important;
+}
+
+.progress-container .progress .progress-bar {
+	background: #ff416c;
+	background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+	background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
 .progress,
 .progress-text {
 	font-weight: 500 !important;
 	font-size: 20px !important;
 	height: 5px !important;
+	color: rgb(255, 195, 195) !important;
 }
-
+.progress-container .progress .progress-value {
+	color: rgb(252, 230, 230) !important;
+}
 .button-text {
 	font-size: 16px !important;
 }
