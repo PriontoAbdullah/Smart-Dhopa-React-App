@@ -1,8 +1,8 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { Redirect, Route } from 'react-router-dom';
 import firebaseConfig from '../../firebase.config';
-import { Route, Redirect } from 'react-router-dom';
 
 //***************** Fire base Initialization ************************
 firebase.initializeApp(firebaseConfig);
@@ -37,22 +37,42 @@ export const PrivateRoute = ({ children, ...rest }) => {
 	);
 };
 
-const getUser = (user) => {
+export const PrivateAdminRoute = ({ children, ...rest }) => {
+	const auth = useAuth();
+	return (
+		<Route
+			{...rest}
+			render={({ location }) =>
+				auth.user ? (
+					children
+				) : (
+					<Redirect
+						to={{
+							pathname: '/admin',
+							state: { from: location }
+						}}
+					/>
+				)}
+		/>
+	);
+};
+
+export const getUser = (user) => {
 	const { email, displayName, photoURL } = user;
 	return { email, name: displayName, photo: photoURL };
 };
 
 export const resetPassword = (email) => {
-    var auth = firebase.auth();
+	var auth = firebase.auth();
 
-    auth
-        .sendPasswordResetEmail(email)
-        .then(function() {
-            // Email sent.
-        })
-        .catch(function(error) {
-            // An error happened.
-        });
+	auth
+		.sendPasswordResetEmail(email)
+		.then(function() {
+			// Email sent.
+		})
+		.catch(function(error) {
+			// An error happened.
+		});
 };
 
 const Auth = () => {
@@ -133,6 +153,20 @@ const Auth = () => {
 			});
 	};
 
+	const signInAdmin = (email, password) => {
+		return firebase
+			.auth()
+			.signInWithEmailAndPassword(email, password)
+			.then((result) => {
+				setUser(result.user);
+				window.location.replace("/admin/dashboard");
+			})
+			.catch((error) => {
+				setUser(null);
+				return error.message;
+			});
+	};
+
 	const signUp = (email, password, name) => {
 		return firebase
 			.auth()
@@ -147,6 +181,7 @@ const Auth = () => {
 						setUser(result.user);
 						verifyEmail();
 						window.history.back();
+
 					});
 			})
 			.catch((error) => {
@@ -172,6 +207,7 @@ const Auth = () => {
 	return {
 		user,
 		signIn,
+		signInAdmin,
 		signUp,
 		signOut,
 		signInWithGoogle,

@@ -13,32 +13,32 @@ const service = [
 	{
 		src: <FontAwesomeIcon icon={faTruck} /> ,
 		name: 'Free Pickup & Delivery ',
-		title: 'lorem ipsum demet hau mau khau, manusher gondo pau.'
+		title: 'Doorstep Pickup and Your clothes will be delivered at your doorstep on time and as fresh as daisy.'
 	},
 	{
 		src: <FontAwesomeIcon icon={faSoap} /> ,
 		name: 'Hygienic',
-		title: 'lorem ipsum demet hau mau khau, manusher gondo pau.'
+		title: 'Your clothes are hygienically washed so they are germ free and clean. The way you think about laundry!.'
 	},
 	{
 		src: <FontAwesomeIcon icon={faLiraSign} /> ,
 		name: 'Affordable',
-		title: 'lorem ipsum demet hau mau khau, manusher gondo pau.'
+		title: 'No Additional Cost! You pay just as same as the price set by your selected laundry vendor.'
 	},
 	{
 		src: <FontAwesomeIcon icon={faLeaf} /> ,
 		name: 'Eco Friendly',
-		title: 'lorem ipsum demet hau mau khau, manusher gondo pau.'
+		title: 'Local residents love on our reliable laundry & dry cleaning services for the fast, accurate, top quality results.'
 	},
 	{
 		src: <FontAwesomeIcon icon={faMedal} /> ,
 		name: 'Quality Guarantee',
-		title: 'lorem ipsum demet hau mau khau, manusher gondo pau.'
+		title: 'We are professionals in the laundry business, which means we always up to date on the latest technologies.'
 	},
 	{
 		src: <FontAwesomeIcon icon={faMoneyBillAlt} /> ,
 		name: 'Transparent Pricing',
-		title: 'lorem ipsum demet hau mau khau, manusher gondo pau.'
+		title: 'In Affordable price our services in the same budget or less than any other local laundry services near you.'
 	}
 ];
 

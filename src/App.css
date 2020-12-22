@@ -1,3 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  text-transform: none !important;
+}
+
+.btn-danger {
+  background-color: #ff3636 !important;
+}
+
 .bg-danger {
   background-color: #ee3e3d !important;
 }
@@ -17,6 +29,10 @@
   border-radius: 0.1875rem;
 }
 
+#hero .now-ui-icons {
+  color: #fff;
+}
+
 #about-us {
   background-image: url("./images/bg/biography-bg.png");
   background-repeat: no-repeat;
@@ -29,7 +45,7 @@
   content: "";
   width: 100px;
   height: 2px;
-  background-color: #FF3636;
+  background-color: #ff3636;
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -48,7 +64,7 @@
 }
 
 .MuiTimelineDot-defaultSecondary {
-  background-color: #FF3636 !important;
+  background-color: #ff3636 !important;
 }
 
 #services .head-title:after {
@@ -56,7 +72,7 @@
   content: "";
   width: 150px;
   height: 2px;
-  background-color: #FF3636;
+  background-color: #ff3636;
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -66,7 +82,7 @@
   content: "";
   width: 170px;
   height: 2px;
-  background-color: #FF3636;
+  background-color: #ff3636;
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -85,7 +101,7 @@
 }
 
 .video-js .vjs-big-play-button {
-  background-color: #FF3636 !important;
+  background-color: #ff3636 !important;
 }
 
 .icon-size {
@@ -99,7 +115,7 @@
   content: "";
   width: 200px;
   height: 2px;
-  background-color: #FF3636;
+  background-color: #ff3636;
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -108,7 +124,8 @@
   border-radius: 10px;
 }
 
-#ChooseUs h4, #ChooseUs .h4 {
+#ChooseUs h4,
+#ChooseUs .h4 {
   margin-top: 0;
 }
 
@@ -128,7 +145,7 @@
   content: "";
   width: 210px;
   height: 2px;
-  background-color: #FF3636;
+  background-color: #ff3636;
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -138,7 +155,7 @@
   content: "";
   width: 130px;
   height: 2px;
-  background-color: #FF3636;
+  background-color: #ff3636;
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -153,6 +170,6 @@
 }
 
 #Footer a {
-  color: #FF3636;
+  color: #ff3636;
 }
 /*# sourceMappingURL=App.css.map */
