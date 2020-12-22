@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  text-transform: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-danger {
+  background-color: #ff3636 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-danger {
+  background-color: #ee3e3d !important;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-name {
+  font-size: 14px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar .navbar-nav .nav-link:not(.btn) {
+  font-size: 0.9rem;
+  line-height: 2rem;
 }
+
+#hero .carousel .carousel-inner {
+  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0) !important;
+          box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0) !important;
+  border-radius: 0.1875rem;
+}
+
+#hero .now-ui-icons {
+  color: #fff;
+}
+
+#about-us {
+  background-image: url("./images/bg/biography-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#about-us .head-title:after {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #ff3636;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.service-image {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.service-image:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.9;
+}
+
+.MuiTimelineDot-defaultSecondary {
+  background-color: #ff3636 !important;
+}
+
+#services .head-title:after {
+  display: block;
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: #ff3636;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+#works .head-title:after {
+  display: block;
+  content: "";
+  width: 170px;
+  height: 2px;
+  background-color: #ff3636;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.video-js {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.vjs-poster {
+  border-radius: 5px;
+}
+
+.video-js .vjs-big-play-button {
+  background-color: #ff3636 !important;
+}
+
+.icon-size {
+  font-size: 50px;
+  padding: 0 0;
+  margin-top: 10px;
+}
+
+#ChooseUs .head-title:after {
+  display: block;
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #ff3636;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+#ChooseUs .card {
+  border-radius: 10px;
+}
+
+#ChooseUs h4,
+#ChooseUs .h4 {
+  margin-top: 0;
+}
+
+.MuiBox-root-6 .MuiBox-root-10 .MuiBox-root-12 {
+  margin-bottom: 10px !important;
+}
+
+#Review {
+  background-image: url("./images/bg/biography-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#Review .head-title:after {
+  display: block;
+  content: "";
+  width: 210px;
+  height: 2px;
+  background-color: #ff3636;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+#contactUs .head-title:after {
+  display: block;
+  content: "";
+  width: 130px;
+  height: 2px;
+  background-color: #ff3636;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+#contactUs label {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#Footer {
+  background-color: #272727;
+}
+
+#Footer a {
+  color: #ff3636;
+}
+/*# sourceMappingURL=App.css.map */

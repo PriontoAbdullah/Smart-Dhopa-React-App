@@ -1,0 +1,144 @@
+$base-color: #ff3636;
+
+@mixin underTitle($titleWidth) {
+	.head-title:after {
+		display: block;
+		content: "";
+		width: $titleWidth;
+		height: 2px;
+		background-color: $base-color;
+		margin: 0 auto;
+		margin-top: 5px;
+	}
+}
+
+@mixin bgImage($imgURL) {
+	background-image: url($imgURL);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.btn {
+	text-transform: none !important;
+}
+
+.btn-danger {
+	background-color: #ff3636 !important;
+}
+
+.bg-danger {
+	background-color: #ee3e3d !important;
+}
+
+.nav-name {
+	font-size: 14px !important;
+}
+
+.navbar .navbar-nav .nav-link:not(.btn) {
+	font-size: 0.9rem;
+	line-height: 2rem;
+}
+
+#hero {
+	.carousel .carousel-inner {
+		box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0) !important;
+		border-radius: 0.1875rem;
+	}
+
+	.now-ui-icons {
+		color: #fff;
+	}
+}
+
+#about-us {
+	@include underTitle(100px);
+
+	@include bgImage('./images/bg/biography-bg.png');
+}
+
+.service-image {
+	transition: transform 0.5s;
+	&:hover {
+		transform: scale(0.9);
+		opacity: 0.9;
+	}
+}
+
+.MuiTimelineDot-defaultSecondary {
+	background-color: $base-color !important;
+}
+
+#services {
+	@include underTitle(150px);
+}
+
+#works {
+	@include underTitle(170px);
+}
+
+.video-js {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.vjs-poster {
+	border-radius: 5px;
+}
+
+.video-js .vjs-big-play-button {
+	background-color: $base-color !important;
+}
+
+.icon-size {
+	font-size: 50px;
+	padding: 0 0;
+	margin-top: 10px;
+}
+
+#ChooseUs {
+	@include underTitle(200px);
+
+	.card {
+		border-radius: 10px;
+	}
+
+	h4,
+	.h4 {
+		margin-top: 0;
+	}
+}
+
+.MuiBox-root-6 .MuiBox-root-10 .MuiBox-root-12 {
+	margin-bottom: 10px !important;
+}
+
+#Review {
+	@include underTitle(210px);
+
+	@include bgImage('./images/bg/biography-bg.png');
+}
+
+#contactUs {
+	@include underTitle(130px);
+
+	label {
+		font-size: 16px;
+		margin-top: 10px;
+	}
+}
+
+#Footer {
+	background-color: rgb(39, 39, 39);
+
+	a {
+		color: $base-color;
+	}
+}
