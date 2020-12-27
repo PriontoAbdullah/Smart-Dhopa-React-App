@@ -19,7 +19,7 @@ const Dashboard = (props) => {
 		fetch('http://localhost:4200/orders?email=' + auth.user.email)
 			.then((res) => res.json())
 			.then((data) => setOrder(data));
-	}, []);
+	}, [order.length]);
 
 	const componentRef = useRef();
 
@@ -40,7 +40,7 @@ const Dashboard = (props) => {
 		<Container>
 			<div className="d-flex justify-content-center mb-4">
 				<h2 className="text-danger head-title mt-5">
-					{order.length ? 'Your Order History' : 'No Order Placed'}
+					Your Order History
 				</h2>
 			</div>
 

@@ -88,7 +88,6 @@ const AllOrders = () => {
 		setProduct(updateQuantity);
 	};
 
-
 	const onSubmit = (data) => {
 		const details = {
 			fullName: selectOrder.shipment.fullName,
@@ -116,8 +115,12 @@ const AllOrders = () => {
 		const grandTotal = subTotal + deliveryCharge;
 
 		const calculatePrice = { subTotal, deliveryCharge, grandTotal };
-
-		const updateOrder = { id: data.id, shipment: details, products: product, price: calculatePrice };
+		let updateOrder;
+		if (product.length == 0) {
+			updateOrder = { id: data.id, shipment: details, products: selectOrder.products, price: selectOrder.price };
+		} else {
+			updateOrder = { id: data.id, shipment: details, products: product, price: calculatePrice };
+		}
 		console.log(updateOrder);
 
 		// Storing Data to Database
