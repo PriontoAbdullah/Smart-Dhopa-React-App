@@ -60,7 +60,7 @@ const AllOrders = () => {
 		ContextData.setOrder(newDataArray);
 
 		// Storing Data in database
-		fetch('http://localhost:4200/updateOrder', {
+		fetch('https://smart-dhopa-server.herokuapp.com/updateOrder', {
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json'
@@ -124,7 +124,7 @@ const AllOrders = () => {
 		console.log(updateOrder);
 
 		// Storing Data to Database
-		fetch('http://localhost:4200/updateOrderDetails', {
+		fetch('https://smart-dhopa-server.herokuapp.com/updateOrderDetails', {
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json'

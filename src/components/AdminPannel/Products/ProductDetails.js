@@ -40,7 +40,7 @@ const ProductDetails = (props) => {
 	const handleDeleteProduct = () => {
 		const id = selectProduct._id;
 		// Delete product from database
-		fetch(`http://localhost:4200/deleteProducts/${id}`, {
+		fetch(`https://smart-dhopa-server.herokuapp.com/deleteProducts/${id}`, {
 			method: 'DELETE'
 		})
 			.then((res) => res.json())
@@ -78,7 +78,7 @@ const ProductDetails = (props) => {
 		e.target.reset();
 
 		// Storing Data To Database
-		fetch('http://localhost:4200/addProducts', {
+		fetch('https://smart-dhopa-server.herokuapp.com/addProducts', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
@@ -118,7 +118,7 @@ const ProductDetails = (props) => {
 
 		// Storing Data to Database
 
-		fetch('http://localhost:4200/updateProduct', {
+		fetch('https://smart-dhopa-server.herokuapp.com/updateProduct', {
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json'

@@ -103,7 +103,7 @@ const Cart = (props) => {
 
 		const orderAdded = { email, shipment, products, price, orderDetails, status, progress };
 
-		fetch('http://localhost:4200/addOrders', {
+		fetch('https://smart-dhopa-server.herokuapp.com/addOrders', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(orderAdded)
