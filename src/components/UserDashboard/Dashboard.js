@@ -16,7 +16,7 @@ const Dashboard = (props) => {
 	const [ order, setOrder ] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:4200/orders?email=' + auth.user.email)
+		fetch('https://smart-dhopa-server.herokuapp.com/orders?email=' + auth.user.email)
 			.then((res) => res.json())
 			.then((data) => setOrder(data));
 	}, [order.length]);

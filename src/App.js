@@ -35,11 +35,11 @@ function App() {
 	const [ products, setProducts ] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:4200/allOrders').then((res) => res.json()).then((data) => setOrder(data));
+		fetch('https://smart-dhopa-server.herokuapp.com/allOrders').then((res) => res.json()).then((data) => setOrder(data));
 	}, [order.length]);
 
 	useEffect(() => {
-		fetch('http://localhost:4200/products').then((res) => res.json()).then((data) => setProducts(data));
+		fetch('https://smart-dhopa-server.herokuapp.com/products').then((res) => res.json()).then((data) => setProducts(data));
 	}, [products.length]);
 
 	const contextData = { order, setOrder, products, setProducts };
