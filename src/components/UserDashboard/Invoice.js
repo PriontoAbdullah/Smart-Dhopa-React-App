@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 import Logo from '../../images/logo.png';
+import './dashboard.css';
 
 const Invoice = (props) => {
     
@@ -16,7 +17,7 @@ const Invoice = (props) => {
 				<h2 className="text-danger head-title mt-5">Smart Dhopa Online Laundry Service</h2>
 			</div>
 			<div className="row">
-				<div className="col-print-8">
+				<div className="col-md-8">
 					<h3>
 						<span className="text-secondary">Order Number: </span>#{singleOrder.orderDetails}
 					</h3>
@@ -57,7 +58,7 @@ const Invoice = (props) => {
 					</p>
 				</div>
 
-				<div className="col-print-4">
+				<div className=" col-md-4">
 					<img src={Logo} alt="Logo" />
 					<p>
 						Our Vision is to -
@@ -116,7 +117,7 @@ const Invoice = (props) => {
 				</h3>
 			</div>
 			<div className="row">
-				<div className="col-print-6">
+				<div className="col-md-7">
 					<div className="my-5">
 						<h3 className="text-primary">Get in touch, send us an email or call us</h3>
 						<p>
@@ -125,7 +126,7 @@ const Invoice = (props) => {
 						</p>
 					</div>
 				</div>
-				<div className="col-print-6 mt-5">
+				<div className="col-md-5 mt-5">
 					<h4 className="text-dark mt-3">
 						<i className="now-ui-icons tech_mobile" />+8809-6380-79309
 					</h4>

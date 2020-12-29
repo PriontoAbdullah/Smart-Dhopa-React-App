@@ -62,8 +62,8 @@ const Dashboard = (props) => {
 									</div>
 								</Col>
 
-								<Col md={3} className="pl-5">
-									<h4 className="mt-0 mb-5">{new Date(`${item.shipment.getDate}`).toDateString()}</h4>
+								<Col md={3} className="show-details">
+									<h4 className="mt-0 mb-5 show-date">{new Date(`${item.shipment.getDate}`).toDateString()}</h4>
 									<Button
 										className="button-text"
 										color="danger"
@@ -140,7 +140,7 @@ const Dashboard = (props) => {
 						isOpen={modalIsOpen}
 					>
 						<div className="d-flex justify-content-center">
-							<button className="btn btn-danger w-25 mt-4" color="danger" onClick={handlePrint}>
+							<button className="btn btn-danger mt-4 button-view" color="danger" onClick={handlePrint}>
 								Download Invoice
 							</button>
 						</div>

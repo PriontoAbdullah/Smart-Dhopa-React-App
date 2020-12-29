@@ -83,3 +83,28 @@
 .button-text {
 	font-size: 16px !important;
 }
+
+.show-details {
+	padding-top: 40px !important;
+	padding-left: 50px !important;
+}
+.button-view {
+	width: 25% !important;
+}
+
+@media (max-width: 440px) {
+	.show-details {
+		padding-left: 15px !important;
+	}
+	.show-date {
+		padding-top: 20px !important;
+	}
+
+	.print-container {
+		padding: 0 15px;
+	}
+
+	.button-view {
+		width: 100% !important;
+	}
+}
