@@ -18,7 +18,7 @@ const Sidebar = () => {
 	const auth = useAuth();
 
 	return (
-		<div className="sidebar d-flex flex-column justify-content-between py-4 px-4" style={{ height: '100vh' }}>
+		<div className="sidebar d-flex flex-column justify-content-between py-4 px-3" style={{ height: '100vh' }}>
 			<ul className="list-unstyled nav flex-column">
 				<li className="nav-item">
 					<Link to="/admin" className="text-white nav-link ">

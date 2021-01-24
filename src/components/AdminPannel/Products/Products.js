@@ -140,7 +140,7 @@ const Product = () => {
 
 						<div className="row mt-2">
 							<div className="col-md-3">
-								<h3 className="pt-3">Wash & Iron</h3>
+								<h3 className="pt-2">Wash & Iron</h3>
 							</div>
 							<div className="col-md-3">
 								<button
@@ -170,7 +170,7 @@ const Product = () => {
 
 						<div className="row mt-2">
 							<div className="col-md-3">
-								<h3 className="pt-3">Wash & Fold</h3>
+								<h3 className="pt-2">Wash & Fold</h3>
 							</div>
 							<div className="col-md-3">
 								<button
@@ -200,7 +200,7 @@ const Product = () => {
 
 						<div className="row mt-2">
 							<div className="col-md-3">
-								<h3 className="pt-3">Iron & Fold</h3>
+								<h3 className="pt-2">Iron & Fold</h3>
 							</div>
 							<div className="col-md-3">
 								<button
@@ -230,7 +230,7 @@ const Product = () => {
 
 						<div className="row mt-2">
 							<div className="col-md-3">
-								<h3 className="pt-3">Dry Cleaning</h3>
+								<h3 className="pt-2">Dry Cleaning</h3>
 							</div>
 							<div className="col-md-3">
 								<button
@@ -260,7 +260,7 @@ const Product = () => {
 
 						<div className="row mt-2">
 							<div className="col-md-3">
-								<h3 className="pt-3">Emergency</h3>
+								<h3 className="pt-2">Emergency</h3>
 							</div>
 							<div className="col-md-3">
 								<button
@@ -290,7 +290,7 @@ const Product = () => {
 
 						<div className="row mt-2">
 							<div className="col-md-3">
-								<h3 className="pt-3">Subscription</h3>
+								<h3 className="pt-2">Subscription</h3>
 							</div>
 							<div className="col-md-3">
 								<button

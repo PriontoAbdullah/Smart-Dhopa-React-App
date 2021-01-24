@@ -60,7 +60,7 @@ const AllOrders = () => {
 		ContextData.setOrder(newDataArray);
 
 		// Storing Data in database
-		fetch('http://localhost:4200/updateOrder', {
+		fetch('https://smart-dhopa-server.herokuapp.com/updateOrder', {
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json'
@@ -87,7 +87,6 @@ const AllOrders = () => {
 		});
 		setProduct(updateQuantity);
 	};
-
 
 	const onSubmit = (data) => {
 		const details = {
@@ -116,12 +115,16 @@ const AllOrders = () => {
 		const grandTotal = subTotal + deliveryCharge;
 
 		const calculatePrice = { subTotal, deliveryCharge, grandTotal };
-
-		const updateOrder = { id: data.id, shipment: details, products: product, price: calculatePrice };
+		let updateOrder;
+		if (product.length == 0) {
+			updateOrder = { id: data.id, shipment: details, products: selectOrder.products, price: selectOrder.price };
+		} else {
+			updateOrder = { id: data.id, shipment: details, products: product, price: calculatePrice };
+		}
 		console.log(updateOrder);
 
 		// Storing Data to Database
-		fetch('http://localhost:4200/updateOrderDetails', {
+		fetch('https://smart-dhopa-server.herokuapp.com/updateOrderDetails', {
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json'
@@ -147,7 +150,7 @@ const AllOrders = () => {
 				</h3>
 			</div>
 
-			<div className="table-style mt-0 ml-0">
+			<div className="table-style mt-0 ml-0 mb-4">
 				<Table small hover>
 					<thead>
 						<tr>
@@ -170,8 +173,8 @@ const AllOrders = () => {
 								<td>{item.shipment.fullName}</td>
 								<td>{item.shipment.email}</td>
 								<td>{item.shipment.mobileNumber}</td>
-								<td>{new Date(`${item.shipment.getDate}`).toDateString()}</td>
-								<td className="pl-4">{item.products.length}</td>
+								<td>{new Date(`${item.shipment.getDate}`).toDateString().substr(4, 12)}</td>
+								<td className="text-center">{item.products.length}</td>
 								<td>
 									<Button
 										className="py-2 my-0 blue-gradient"

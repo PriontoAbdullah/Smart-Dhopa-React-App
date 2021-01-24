@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
 import '../../App.css';
 
@@ -8,6 +9,7 @@ const Footer = () => {
             <Container>
                 <Row className="py-3">
                     <Col md={6} className="py-3">
+                        <Link to="/admin"><h3 className="text-danger"><i className="now-ui-icons users_circle-08 mr-2"></i>Admin Panel</h3></Link>
                         <h4 className="text-danger">Smart Dhopa Online Laundry Service</h4>
                         <p className="text-white">Email: smartdhopa.support@gmail.com</p>
                         <p className="text-white">Phone: +8809-6380-79309</p>
@@ -30,7 +32,7 @@ const Footer = () => {
                     </Col>
                 </Row>
                 <div className='footer-bottom d-flex justify-content-center'>
-                    <p className='text-secondary'>Copyright &copy; 2020 Developed by Code Pundit Team </p>
+                    <p className='text-secondary'>Copyright &copy; 2020 Developed by Prionto Abdullah </p>
                 </div>
             </Container>
         </footer>

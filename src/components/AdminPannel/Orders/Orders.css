@@ -7,9 +7,10 @@
 	position: sticky;
 	position: -webkit-sticky;
 	top: 90px;
-	width: 100%;
+	width: 105%;
 	overflow: auto;
 	z-index: 100;
+	margin-bottom: 15px;
 }
 
 i .action {
@@ -30,4 +31,12 @@ i .action {
 
 .table-data {
 	font-size: 18px !important;
+}
+
+.table-style th {
+	font-size: 15px !important;
+}
+
+.table-style td {
+	font-size: 14px !important;
 }

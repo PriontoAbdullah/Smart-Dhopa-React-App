@@ -32,6 +32,7 @@ const AdminLogin = () => {
 							<input
 								name="email"
 								className="form-control"
+								value="smart.dhopa@gmail.com"
 								ref={register({ required: true })}
 								placeholder="Email"
 							/>
@@ -42,6 +43,7 @@ const AdminLogin = () => {
 							<input
 								type="password"
 								name="password"
+								value="Smart@123"
 								className="form-control"
 								ref={register({ required: true })}
 								placeholder="Password"

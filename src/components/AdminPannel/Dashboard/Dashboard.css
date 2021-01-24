@@ -33,3 +33,11 @@
 	position: relative !important;
 	margin-top: 5px !important;
 }
+
+#statical-dashboard h6 {
+	font-size: 30px;
+}
+
+#statical-dashboard p {
+	font-size: 17px;
+}
