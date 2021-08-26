@@ -150,7 +150,7 @@ const AllOrders = () => {
 				</h3>
 			</div>
 
-			<div className="table-style mt-0 ml-0">
+			<div className="table-style mt-0 ml-0 mb-4">
 				<Table small hover>
 					<thead>
 						<tr>
@@ -173,8 +173,8 @@ const AllOrders = () => {
 								<td>{item.shipment.fullName}</td>
 								<td>{item.shipment.email}</td>
 								<td>{item.shipment.mobileNumber}</td>
-								<td>{new Date(`${item.shipment.getDate}`).toDateString()}</td>
-								<td className="pl-4">{item.products.length}</td>
+								<td>{new Date(`${item.shipment.getDate}`).toDateString().substr(4, 12)}</td>
+								<td className="text-center">{item.products.length}</td>
 								<td>
 									<Button
 										className="py-2 my-0 blue-gradient"

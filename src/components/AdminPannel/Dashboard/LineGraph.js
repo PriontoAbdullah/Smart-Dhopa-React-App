@@ -44,13 +44,13 @@ const LineGraph = () => {
 		<div>
 			<h4 className="mt-2 py-2">Weekly Orders</h4>
 			<BarChart
-				width={650}
-				height={420}
+				width={600}
+				height={400}
 				data={data}
 				margin={{
 					top: 10,
 					right: 1,
-					left: 1,
+					left: 0,
 					bottom: 5
 				}}
 			>

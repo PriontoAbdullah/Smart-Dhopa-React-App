@@ -89,7 +89,7 @@ const PieGraph = () => {
 
 	const style = {
 		top: -270,
-		left: 370,
+		left: 310,
 		lineHeight: '30px'
 	};
 

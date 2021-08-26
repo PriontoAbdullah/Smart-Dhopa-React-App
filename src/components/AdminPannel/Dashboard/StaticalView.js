@@ -27,7 +27,7 @@ const StaticalView = () => {
 	}, 0);
 
 	return (
-		<div>
+		<div id="statical-dashboard">
 			<div className="row d-flex justify-content-between">
 				<h3 className="mt-3">Admin Dashboard</h3>
 				<h3 className="mr-5 mt-3">

@@ -19,6 +19,7 @@ import Hero from './components/Home/Hero';
 import Review from './components/Home/Review';
 import Services from './components/Home/Services';
 import Works from './components/Home/Works';
+import Preloader from './components/Preloader/Preloader';
 import DryCleaning from './components/Services/DryCleaning';
 import EmergencyService from './components/Services/EmergencyService';
 import IronAndFold from './components/Services/IronAndFold';
@@ -33,14 +34,26 @@ function App() {
 	const [ cart, setCart ] = useState([]);
 	const [ order, setOrder ] = useState([]);
 	const [ products, setProducts ] = useState([]);
+	const [ preLoaderVisibility, setPreLoaderVisibility ] = useState(true);
 
-	useEffect(() => {
-		fetch('https://smart-dhopa-server.herokuapp.com/allOrders').then((res) => res.json()).then((data) => setOrder(data));
-	}, [order.length]);
+	useEffect(
+		() => {
+			fetch('https://smart-dhopa-server.herokuapp.com/allOrders')
+				.then((res) => res.json())
+				.then((data) => setOrder(data));
+		},
+		[ order.length ]
+	);
 
-	useEffect(() => {
-		fetch('https://smart-dhopa-server.herokuapp.com/products').then((res) => res.json()).then((data) => setProducts(data));
-	}, [products.length]);
+	useEffect(
+		() => {
+			fetch('https://smart-dhopa-server.herokuapp.com/products')
+				.then((res) => res.json())
+				.then((data) => setProducts(data));
+			setPreLoaderVisibility(false);
+		},
+		[ products.length ]
+	);
 
 	const contextData = { order, setOrder, products, setProducts };
 
@@ -125,144 +138,150 @@ function App() {
 
 	return (
 		<div>
-			<AuthProvider>
-				<DataContext.Provider value={contextData}>
-					<Router>
-						<Switch>
-							<Route exact path="/">
-								<Header cart={cart} />
-								<Hero />
-								<About />
-								<Services />
-								<Works />
-								<ChooseUs />
-								<Review />
-								<ContactUs />
-								<Footer />
-							</Route>
+			{preLoaderVisibility ? (
+				<div style={{ marginTop: '200px' }}>
+					<Preloader />
+				</div>
+			) : (
+				<AuthProvider>
+					<DataContext.Provider value={contextData}>
+						<Router>
+							<Switch>
+								<Route exact path="/">
+									<Header cart={cart} />
+									<Hero />
+									<About />
+									<Services />
+									<Works />
+									<ChooseUs />
+									<Review />
+									<ContactUs />
+									<Footer />
+								</Route>
 
-							<Route exact path="/services">
-								<Header cart={cart} />
-								<Services />
-								<Review />
-								<Footer />
-							</Route>
+								<Route exact path="/services">
+									<Header cart={cart} />
+									<Services />
+									<Review />
+									<Footer />
+								</Route>
 
-							<Route exact path="/wash-and-iron">
-								<Header cart={cart} />
-								<WashAndIron
-									cart={cart}
-									handleAddProduct={handleAddProduct}
-									handleRemoveProduct={handleRemoveProduct}
-								/>
-								<Footer />
-							</Route>
+								<Route exact path="/wash-and-iron">
+									<Header cart={cart} />
+									<WashAndIron
+										cart={cart}
+										handleAddProduct={handleAddProduct}
+										handleRemoveProduct={handleRemoveProduct}
+									/>
+									<Footer />
+								</Route>
 
-							<Route exact path="/wash-and-fold">
-								<Header cart={cart} />
-								<WashAndFold
-									cart={cart}
-									handleAddProduct={handleAddProduct}
-									handleRemoveProduct={handleRemoveProduct}
-								/>
-								<Footer />
-							</Route>
+								<Route exact path="/wash-and-fold">
+									<Header cart={cart} />
+									<WashAndFold
+										cart={cart}
+										handleAddProduct={handleAddProduct}
+										handleRemoveProduct={handleRemoveProduct}
+									/>
+									<Footer />
+								</Route>
 
-							<Route exact path="/iron-and-fold">
-								<Header cart={cart} />
-								<IronAndFold
-									cart={cart}
-									handleAddProduct={handleAddProduct}
-									handleRemoveProduct={handleRemoveProduct}
-								/>
-								<Footer />
-							</Route>
+								<Route exact path="/iron-and-fold">
+									<Header cart={cart} />
+									<IronAndFold
+										cart={cart}
+										handleAddProduct={handleAddProduct}
+										handleRemoveProduct={handleRemoveProduct}
+									/>
+									<Footer />
+								</Route>
 
-							<Route exact path="/dry-cleaning">
-								<Header cart={cart} />
-								<DryCleaning
-									cart={cart}
-									handleAddProduct={handleAddProduct}
-									handleRemoveProduct={handleRemoveProduct}
-								/>
-								<Footer />
-							</Route>
+								<Route exact path="/dry-cleaning">
+									<Header cart={cart} />
+									<DryCleaning
+										cart={cart}
+										handleAddProduct={handleAddProduct}
+										handleRemoveProduct={handleRemoveProduct}
+									/>
+									<Footer />
+								</Route>
 
-							<Route exact path="/subscription-based">
-								<Header cart={cart} />
-								<SubscriptionBased
-									cart={cart}
-									handleAddProduct={handleAddProduct}
-									handleRemoveProduct={handleRemoveProduct}
-								/>
-								<Footer />
-							</Route>
+								<Route exact path="/subscription-based">
+									<Header cart={cart} />
+									<SubscriptionBased
+										cart={cart}
+										handleAddProduct={handleAddProduct}
+										handleRemoveProduct={handleRemoveProduct}
+									/>
+									<Footer />
+								</Route>
 
-							<Route exact path="/emergency-service">
-								<Header cart={cart} />
-								<EmergencyService
-									cart={cart}
-									handleAddProduct={handleAddProduct}
-									handleRemoveProduct={handleRemoveProduct}
-								/>
-								<Footer />
-							</Route>
+								<Route exact path="/emergency-service">
+									<Header cart={cart} />
+									<EmergencyService
+										cart={cart}
+										handleAddProduct={handleAddProduct}
+										handleRemoveProduct={handleRemoveProduct}
+									/>
+									<Footer />
+								</Route>
 
-							<PrivateRoute exact path="/cart-and-shipment">
-								<Header cart={cart} />
-								<Bag
-									cart={cart}
-									handleAddProduct={handleAddProduct}
-									handleRemoveProduct={handleRemoveProduct}
-									deliveryDetails={deliveryDetails}
-									deliveryDetailsHandler={deliveryDetailsHandler}
-									clearCart={clearCart}
-									clearDeliveryDetails={clearDeliveryDetails}
-								/>
-								<Footer />
-							</PrivateRoute>
+								<PrivateRoute exact path="/cart-and-shipment">
+									<Header cart={cart} />
+									<Bag
+										cart={cart}
+										handleAddProduct={handleAddProduct}
+										handleRemoveProduct={handleRemoveProduct}
+										deliveryDetails={deliveryDetails}
+										deliveryDetailsHandler={deliveryDetailsHandler}
+										clearCart={clearCart}
+										clearDeliveryDetails={clearDeliveryDetails}
+									/>
+									<Footer />
+								</PrivateRoute>
 
-							<PrivateRoute exact path="/dashboard">
-								<Header cart={cart} />
-								<Dashboard cart={cart} deliveryDetails={deliveryDetails} />
-								<Footer />
-							</PrivateRoute>
+								<PrivateRoute exact path="/dashboard">
+									<Header cart={cart} />
+									<Dashboard cart={cart} deliveryDetails={deliveryDetails} />
+									<Footer />
+								</PrivateRoute>
 
-							<Route exact path="/admin/dashboard">
-								<AdminDashboard />
-							</Route>
+								<Route exact path="/admin/dashboard">
+									<AdminDashboard />
+								</Route>
 
-							<Route exact path="/admin/allOrders">
-								<Orders />
-							</Route>
+								<Route exact path="/admin/allOrders">
+									<Orders />
+								</Route>
 
-							<Route exact path="/admin/products">
-								<Product />
-							</Route>
+								<Route exact path="/admin/products">
+									<Product />
+								</Route>
 
-							<Route exact path="/admin/customers">
-								<Customers />
-							</Route>
+								<Route exact path="/admin/customers">
+									<Customers />
+								</Route>
 
-							<Route exact path="/admin/registration">
-								<Registration />
-							</Route>
+								<Route exact path="/admin/registration">
+									<Registration />
+								</Route>
 
-							<Route exact path="/admin/support">
-								<Support />
-							</Route>
+								<Route exact path="/admin/support">
+									<Support />
+								</Route>
 
-							<Route exact path="/login">
-								<Login />
-							</Route>
+								<Route exact path="/login">
+									<Login />
+								</Route>
 
-							<Route exact path="/admin">
-								<AdminLogin />
-							</Route>
-						</Switch>
-					</Router>
-				</DataContext.Provider>
-			</AuthProvider>
+								<Route exact path="/admin">
+									<AdminLogin />
+								</Route>
+							</Switch>
+						</Router>
+					</DataContext.Provider>
+				</AuthProvider>
+			)}
 		</div>
 	);
 }

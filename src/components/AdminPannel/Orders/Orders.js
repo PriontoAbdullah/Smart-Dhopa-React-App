@@ -6,7 +6,7 @@ import AllOrders from './AllOrders';
 
 const containerStyle = {
 	backgroundColor: '#F4FDFB',
-	height: '100vh'
+    height: '100vh'
 };
 
 const Orders = () => {

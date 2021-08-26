@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import './Login.css';
-import { resetPassword, useAuth } from './useAuth';
-import { useForm } from 'react-hook-form';
+import { faEnvelope, faLock, faLockOpen, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faLock, faEnvelope, faLockOpen } from '@fortawesome/free-solid-svg-icons';
-import google from '../../images/auth/google.svg';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import facebook from '../../images/auth/facebook.svg';
+import google from '../../images/auth/google.svg';
 import loginPic from '../../images/auth/log.svg';
 import registerPic from '../../images/auth/register.svg';
+import './Login.css';
+import { resetPassword, useAuth } from './useAuth';
 
 const Login = () => {
 	const [ toggled, setToggled ] = useState(false);
