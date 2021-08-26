@@ -25,6 +25,7 @@ import houseDress from '../../images/icon/household.png';
 import manDress from '../../images/icon/man.png';
 import womanDress from '../../images/icon/woman.png';
 import Cart from '../CartAndShipment/Cart';
+import Preloader from '../Preloader/Preloader';
 import OrderAndProcess from './OrderAndProcess';
 import './Services.css';
 
@@ -144,6 +145,7 @@ const EmergencyService = (props) => {
 								</AccordionSummary>
 								<AccordionDetails>
 									<List component="nav" className={classes.root} aria-label="mailbox folders">
+										{!ContextData.products.length && <Preloader />}
 										{EmergencyServiceMan.map((item) => (
 											<div key={item.id}>
 												<Divider className="mb-3" />
@@ -218,6 +220,7 @@ const EmergencyService = (props) => {
 								</AccordionSummary>
 								<AccordionDetails>
 									<List component="nav" className={classes.root} aria-label="mailbox folders">
+										{!ContextData.products.length && <Preloader />}
 										{EmergencyServiceWoman.map((item) => (
 											<div key={item.id}>
 												<Divider className="mb-3" />
@@ -292,6 +295,7 @@ const EmergencyService = (props) => {
 								</AccordionSummary>
 								<AccordionDetails>
 									<List component="nav" className={classes.root} aria-label="mailbox folders">
+										{!ContextData.products.length && <Preloader />}
 										{EmergencyServiceHouse.map((item) => (
 											<div key={item.id}>
 												<Divider className="mb-3" />

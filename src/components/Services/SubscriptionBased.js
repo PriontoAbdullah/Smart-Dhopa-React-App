@@ -11,18 +11,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
-	Button, Col, Container,
-
-
-
-
-	DropdownItem, DropdownMenu, DropdownToggle, Row,
-
-
-
-
-
-
+	Button,
+	Col,
+	Container,
+	DropdownItem,
+	DropdownMenu,
+	DropdownToggle,
+	Row,
 	UncontrolledDropdown
 } from 'reactstrap';
 import { DataContext } from '../../App';
@@ -30,6 +25,7 @@ import houseDress from '../../images/icon/household.png';
 import manDress from '../../images/icon/man.png';
 import womanDress from '../../images/icon/woman.png';
 import Cart from '../CartAndShipment/Cart';
+import Preloader from '../Preloader/Preloader';
 import OrderAndProcess from './OrderAndProcess';
 import './Services.css';
 
@@ -62,7 +58,7 @@ const SubscriptionBased = (props) => {
 	);
 
 	const subscriptionBasedHouse = ContextData.products.filter(
-		(pd) => pd.service === 'Subscription' && pd.category === "Household"
+		(pd) => pd.service === 'Subscription' && pd.category === 'Household'
 	);
 
 	const handleAddToCart = (currentItem) => {
@@ -149,6 +145,7 @@ const SubscriptionBased = (props) => {
 								</AccordionSummary>
 								<AccordionDetails>
 									<List component="nav" className={classes.root} aria-label="mailbox folders">
+										{!ContextData.products.length && <Preloader />}
 										{subscriptionBasedMan.map((item) => (
 											<div key={item.id}>
 												<Divider className="mb-3" />
@@ -223,6 +220,7 @@ const SubscriptionBased = (props) => {
 								</AccordionSummary>
 								<AccordionDetails>
 									<List component="nav" className={classes.root} aria-label="mailbox folders">
+										{!ContextData.products.length && <Preloader />}
 										{subscriptionBasedWoman.map((item) => (
 											<div key={item.id}>
 												<Divider className="mb-3" />
@@ -297,6 +295,7 @@ const SubscriptionBased = (props) => {
 								</AccordionSummary>
 								<AccordionDetails>
 									<List component="nav" className={classes.root} aria-label="mailbox folders">
+										{!ContextData.products.length && <Preloader />}
 										{subscriptionBasedHouse.map((item) => (
 											<div key={item.id}>
 												<Divider className="mb-3" />
@@ -362,7 +361,7 @@ const SubscriptionBased = (props) => {
 							</Accordion>
 						</div>
 					</Col>
-					
+
 					<Col md={5}>
 						<Cart
 							cart={props.cart}
