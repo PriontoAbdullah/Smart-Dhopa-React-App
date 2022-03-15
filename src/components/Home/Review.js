@@ -1,13 +1,13 @@
-import React from 'react';
-import { Col, Row, Container } from 'reactstrap';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import Box from '@material-ui/core/Box';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import Rating from '@material-ui/lab/Rating';
+import React from 'react';
+import { Col, Container, Row } from 'reactstrap';
 import customer1 from '../../images/review/customer-1.jpg';
 import customer2 from '../../images/review/customer-2.jpg';
 import customer3 from '../../images/review/customer-3.jpg';
-import Rating from '@material-ui/lab/Rating';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
 	root: {

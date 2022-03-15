@@ -1,15 +1,15 @@
-import React from 'react';
-import { Row, Container, Col, UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
+import Typography from '@material-ui/core/Typography';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
+import LocalMallIcon from '@material-ui/icons/LocalMall';
+import ScheduleIcon from '@material-ui/icons/Schedule';
 import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
-import Typography from '@material-ui/core/Typography';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
-import ScheduleIcon from '@material-ui/icons/Schedule';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
+import TimelineItem from '@material-ui/lab/TimelineItem';
+import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
+import React from 'react';
+import { Button, Card, CardBody, Col, Container, Row, UncontrolledCollapse } from 'reactstrap';
 import './Services.css';
 
 const faq = [

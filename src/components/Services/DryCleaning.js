@@ -352,7 +352,6 @@ const DryCleaning = (props) => {
 							</Accordion>
 						</div>
 					</Col>
-
 					<Col md={5}>
 						<Cart
 							cart={props.cart}

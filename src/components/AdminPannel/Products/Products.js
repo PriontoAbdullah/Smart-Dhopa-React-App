@@ -5,7 +5,6 @@ import { DataContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import './Product.css';
 import ProductDetails from './ProductDetails';
-
 const containerStyle = {
 	backgroundColor: '#F4FDFB',
 	height: '100vh'

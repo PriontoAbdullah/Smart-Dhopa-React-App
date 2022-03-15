@@ -1,24 +1,24 @@
-import React from 'react';
-import { Col, Container, Row } from 'reactstrap';
-import '../../App.css';
+import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
+import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
+import LocalLaundryServiceIcon from '@material-ui/icons/LocalLaundryService';
+import LocalMallIcon from '@material-ui/icons/LocalMall';
+import PlaceIcon from '@material-ui/icons/Place';
+import ScheduleIcon from '@material-ui/icons/Schedule';
 import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
-import ScheduleIcon from '@material-ui/icons/Schedule';
-import PlaceIcon from '@material-ui/icons/Place';
-import LocalLaundryServiceIcon from '@material-ui/icons/LocalLaundryService';
-import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import VideoPlayer from 'react-video-js-player'; 
-import VideoSrc from '../../images/works.mp4';
+import TimelineItem from '@material-ui/lab/TimelineItem';
+import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
+import React from 'react';
+import VideoPlayer from 'react-video-js-player';
+import { Col, Container, Row } from 'reactstrap';
+import '../../App.css';
 import Poster from '../../images/videoImg.jpg';
+import VideoSrc from '../../images/works.mp4';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {

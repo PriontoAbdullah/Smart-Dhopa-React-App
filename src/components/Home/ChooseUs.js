@@ -1,13 +1,8 @@
+import { faLeaf, faLiraSign, faMedal, faMoneyBillAlt, faSoap, faTruck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Card, CardBody, CardHeader, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
 import '../../App.css';
-import { Col, Container, Row, Card, CardHeader, CardBody, CardTitle, CardText, Button } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTruck } from '@fortawesome/free-solid-svg-icons'
-import { faSoap } from '@fortawesome/free-solid-svg-icons'
-import { faLiraSign } from '@fortawesome/free-solid-svg-icons'
-import { faLeaf } from '@fortawesome/free-solid-svg-icons'
-import { faMedal } from '@fortawesome/free-solid-svg-icons'
-import { faMoneyBillAlt } from '@fortawesome/free-solid-svg-icons'
 
 const service = [
 	{

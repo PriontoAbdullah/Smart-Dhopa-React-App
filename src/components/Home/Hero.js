@@ -1,6 +1,6 @@
 import React from 'react';
-import { Row, Container, Col, Button, Carousel, CarouselItem, CarouselIndicators } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { Button, Carousel, CarouselIndicators, CarouselItem, Col, Container, Row } from 'reactstrap';
 
 const items = [
 	{
